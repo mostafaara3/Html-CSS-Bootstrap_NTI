@@ -1,0 +1,311 @@
+body {
+     font-family: "Work Sans", sans-serif;
+     background: #000046;
+     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+     background: linear-gradient(to right, #1CB5E0, #000046);
+     overflow-x: hidden;
+}
+header {
+     background: url(../images/bg\ header.jpg) no-repeat center/cover;
+     height: 600px;
+}
+
+
+/* Start Navbar-top */
+.top {
+     background-color: #172d41ad;
+}
+.navbar-toggler:focus {
+     box-shadow: none;
+}
+.top a {
+     position: relative;
+     color: white;
+}
+@media screen and (min-width:992px) {
+     .top a:after {
+          content: "";
+          position: absolute;
+          background-color: lightblue;
+          height: 2px;
+          width: 0;
+          left: 0;
+          bottom: 3px;
+          transition: 0.5s;
+     }
+     .top a:hover:after {
+          width: 100%;
+     }
+}
+.top .links .lin.active,
+.top .links .lin:focus,
+.top .links .lin:hover {
+     color: lightblue;
+}
+/* End Navbar-top */
+
+
+/* Start Navbar-bottom */
+.bottom {
+     background-color: #172d41ad;
+     z-index: 20;
+}
+/* Start Social-icons */
+.wrapper,
+.social-icons {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-flow: row wrap;
+     z-index: 10;
+}
+.social-icon {
+     display: flex;
+     position: relative;
+     overflow: hidden;
+     width: 64px;
+     height: 64px;
+     margin: 8px;
+     background-color: white;
+     border-radius: 50%;
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+     text-decoration: none;
+     transition: all 0.3s ease;
+}
+.social-icon i {
+     margin: auto;
+     font-size: 24px;
+     color: hsl(212, 16%, 48%);
+     z-index: 1;
+     transition: all 0.3s ease;
+}
+.social-icon:after {
+     content: "";
+     width: 64px;
+     height: 64px;
+     position: absolute;
+     transform: translate(0, 64px);
+     border-radius: 50%;
+     transition: all 0.3s ease;
+}
+.social-icon.twitter:after {
+     background-color: #1da1f2;
+}
+.social-icon.github:after {
+     background-color: #24292e;
+}
+.social-icon.instagram:after {
+     background-image: linear-gradient(
+     to bottom left,
+     #4f5bd5,
+     #962fbf,
+     #d62976,
+     #fa7e1e,
+     #feda75
+     );
+}
+.social-icon:hover {
+     transform: translateY(-4px);
+     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+.social-icon:hover i {
+     color: #fff;
+}
+.social-icon:hover:after {
+     transform: translate(0) scale(1.2);
+}
+/* End Social-icons */
+.bottom a {
+     color: white;
+}
+.bottom .dropdown-menu a {
+     color: black;
+}
+.bottom .dropdown-menu a:focus,
+.bottom .dropdown-menu a:hover {
+     background-color: lightblue;
+}
+.bottom .navbar-brand:focus,
+.bottom .navbar-brand:hover{
+     color: lightblue;
+}
+.bottom .nav-item .dropdown-toggle:focus,
+.bottom .nav-item .dropdown-toggle:hover {
+     color: lightblue;
+}
+/* End Navbar-bottom */
+
+
+/* Start Latest News */
+.parent {
+     justify-content: center;
+     text-align: center;
+     border: 8px solid lightblue;
+     background-color: lightblue;
+}
+.news {
+     margin: 0px 15px;
+     color: #000046;
+}
+.parent .link {
+     margin-top: 8px;
+}
+.parent .link a {
+     text-decoration: none;
+     color: #000046;
+}
+.parent .link a:hover {
+     color: blue;
+     text-decoration: underline;
+}
+/* End Latest News */
+
+
+/* Start cards */
+/* Start Animation Cards (Read More) */
+.loader {
+     width: 15px;
+     height: 20px;
+     margin-left: 15px;
+     background: #000046;
+     display: inline-block;
+     position: relative;
+     box-sizing: border-box;
+     animation: bump 0.4s ease-in infinite alternate;
+}
+.loader::after {
+     content: '';  
+     box-sizing: border-box;
+     left: 50%;
+     top: 100%;
+     transform: translate(-50%, 0);
+     position: absolute;
+     border: 15px solid transparent;
+     border-top-color: #000046;
+}
+@keyframes bump {
+     0% {
+     transform: translate(-50%, 5px);
+     }
+     100% {
+     transform: translate(-50%, -5px);
+     }
+}
+/* End Animation Cards (Read More) */
+section .btn {
+     background-color: lightblue;
+     color: #000046;
+}
+.card1 {
+     padding-top: 20px;
+}
+/* End Cards */
+
+
+/* Start Courses */
+.Courses img {
+     opacity: 0.7;
+}
+.Courses img:hover{
+     opacity: 1;
+     cursor: pointer;
+     
+}
+/* End Courses */
+
+
+/* Start Lab */
+/* Start Animation Lab & Courses & Scientific (h1) */
+.loader1 {
+     width: 0;
+     height: 4.8px;
+     display: inline-block;
+     position: relative;
+     background: #FFF;
+     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+     box-sizing: border-box;
+     animation: animFw 8s linear infinite;
+}
+.loader1::after,
+.loader1::before {
+     content: '';
+     width: 10px;
+     height: 1px;
+     background: #FFF;
+     position: absolute;
+     top: 9px;
+     right: -2px;
+     opacity: 0;
+     transform: rotate(-45deg) translateX(0px);
+     box-sizing: border-box;
+     animation: coli1 0.3s linear infinite;
+}
+.loader1::before {
+     top: -4px;
+     transform: rotate(45deg);
+     animation: coli2 0.3s linear infinite;
+}
+@keyframes animFw {
+     0% {
+     width: 0;
+}
+     100% {
+     width: 100%;
+}
+}
+@keyframes coli1 {
+     0% {
+     transform: rotate(-45deg) translateX(0px);
+     opacity: 0.7;
+}
+     100% {
+     transform: rotate(-45deg) translateX(-45px);
+     opacity: 0;
+}
+}
+@keyframes coli2 {
+     0% {
+     transform: rotate(45deg) translateX(0px);
+     opacity: 1;
+}
+     100% {
+     transform: rotate(45deg) translateX(-45px);
+     opacity: 0.7;
+}
+}
+/* End Animation Lab & Courses & Scientific (h1) */
+section .lab p {
+     padding: 10px;
+}
+section .lab h4 {
+     padding: 10px;
+}
+section .lab ul li:hover{
+     color: blue;
+     cursor: pointer;
+}
+section .lab .btn {
+     margin-bottom: 10px;
+}
+/* End Lab */
+
+
+/* Start Footer */
+footer .follow {
+     padding: 10px;
+     border-bottom: 1px solid gray;
+}
+footer .follow i {
+     font-size: 30px;
+     padding: 0 10px;
+     color: blue;
+}
+footer .follow a {
+     text-decoration: none;
+     color: #000046;
+}
+footer .follow a:hover {
+     color: blue;
+     text-decoration: underline;
+}
+/* End Footer */
